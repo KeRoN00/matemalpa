@@ -4,9 +4,11 @@ import React from 'react'
 
 type Props = {}
 
+
+
 const index = () => {
   return (
-    <div>STRONA GŁÓWNA</div>
+    <div >STRONA GŁÓWNA</div>
   )
 }
 

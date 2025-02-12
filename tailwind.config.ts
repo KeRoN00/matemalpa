@@ -6,7 +6,6 @@ const config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   corePlugins: {
-    // Enable the `@apply` directive
     apply: true,
   },
   theme: {

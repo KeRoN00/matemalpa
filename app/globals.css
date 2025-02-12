@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Import Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 :root {
   --background: #ffffff;
@@ -18,4 +19,32 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.comic-background {
+  background-color: transparent; /* Jasny, ciepły kolor tła */
+  background-image: radial-gradient(circle, #ffffff 15%, transparent 0%);
+  background-size: 30px 30px; /* Rozmiar kropek */
+  
+  -webkit-mask-image: linear-gradient(to bottom right,black 40%, transparent 50%, black 60%);
+  mask-image: linear-gradient(to bottom right,black 40%, transparent 50%, black 60%);
+  animation: moveBackground 80s linear infinite;
+}
+
+@media (min-width: 1920px) {
+  .comic-background {
+    -webkit-mask-image: linear-gradient(to bottom right,black 30%, transparent 50%, black 70%);
+  mask-image: linear-gradient(to bottom right,black 30%, transparent 50%, black 70%);
+    background-size: 40px 40px; /* Rozmiar kropek dla bardzo dużych ekranów */
+    background-image: radial-gradient(circle, #ffffff 17%, transparent 0%);
+  }
 }

@@ -1,5 +1,4 @@
-/* Import Tailwind CSS */
-@import 'tailwindcss/base';
+@import "tailwindcss/base";
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
@@ -47,4 +46,10 @@ body {
     background-size: 40px 40px; /* Rozmiar kropek dla bardzo dużych ekranów */
     background-image: radial-gradient(circle, #ffffff 17%, transparent 0%);
   }
+}
+.text-gradient {
+  background: linear-gradient(to right, #eab308, #f97316);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

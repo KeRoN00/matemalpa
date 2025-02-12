@@ -1,13 +1,11 @@
+import type { Config } from 'tailwindcss';
 
-const config = {
+const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  corePlugins: {
-    apply: true,
-  },
   theme: {
     extend: {
       colors: {
@@ -17,9 +15,18 @@ const config = {
       fontFamily: {        
         ranchers: ['Ranchers', 'serif'],
       },
+      keyframes: {
+        moveBackground: {
+          '0%': { backgroundPosition: '0 0' },
+          '100%': { backgroundPosition: '100% 100%' },
+        },
+      },
+      animation: {
+        moveBackground: 'moveBackground 80s linear infinite',
+      },
     },
   },
   plugins: [],
 };
 
-module.exports = config;
+export default config;
